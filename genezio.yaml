@@ -1,4 +1,4 @@
-name: express-getting-started
+name: express-getting-started12
 # The region where the application will be deployed. Available regions: us-east-1, eu-central-1
 region: us-east-1
 yamlVersion: 2
@@ -12,7 +12,7 @@ backend:
     deploy:
       - npm install
   functions:
-    - name: express-getting-started-function
+    - name: express-getting-started12-function
       path: ./
       type: aws
       handler: handler
