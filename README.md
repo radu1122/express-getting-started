@@ -15,4 +15,4 @@ frontend:
 
 Then, in the client/index.html file, you can simply fetch data from the Express web app. You can see the Express app's URLs by clicking the "View your URLs" button in the editor.
 
-[![Deploy to Genezio](https://raw.githubusercontent.com/Genez-io/graphics/main/svg/deploy-button.svg)](https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/express-getting-started12)
+[![Deploy to Genezio](https://raw.githubusercontent.com/Genez-io/graphics/main/svg/deploy-button.svg)](https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/express-getting-started23012)
