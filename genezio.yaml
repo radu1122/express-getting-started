@@ -14,5 +14,12 @@ backend:
   functions:
     - name: express-getting-started-function
       path: ./
-      type: httpServer
-      entry: fast.mjs
+      type: aws
+      handler: handler
+      entry: index.mjs
+    - name: express-getting-started-functio2
+      path: ./
+      type: aws
+      handler: handler
+      entry: index.mjs 
+  cloudProvider: genezio-cloud

@@ -1,4 +1,5 @@
 import express from "express";
+import Serverless from "serverless-http";
 
 const app = express();
 
@@ -7,26 +8,16 @@ app.get("/", (req, res) => {
 });
 
 app.get("/users", (req, res) => {
-  res.status(201).json([{ id: 1, name: "Alice" }, { id: 2, name: "Bob" }]);
+  res.json([{ id: 1, name: "Alice" }, { id: 2, name: "Bob" }]);
 });
 
-// route example with streaming
+// You don't need to listen to the port when using serverless functions in production
+if (process.env.NODE_ENV === "dev") {
+  app.listen(8080, () => {
+    console.log(
+      "Server is running on port 8080. Check the app on http://localhost:8080"
+    );
+  });
+}
 
-app.get("/stream", (req, res) => {
-  // write a long string to the response
-  const interval = setInterval(() => {
-    res.write("Hello, World! ");
-  }, 1000);
-
-  // end the response after 5 seconds
-  setTimeout(() => {
-    clearInterval(interval);
-    res.end();
-  }, 5000);
-});
-
-app.listen(8080, () => {
-  console.log(
-    "Server is running on port 8080. Check the app on http://localhost:8080"
-  );
-});
+export const handler = Serverless(app);
