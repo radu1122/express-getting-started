@@ -4,7 +4,7 @@ import Serverless from 'serverless-http';
 const app = express();
 
 app.get('/', (req, res) => {
-  console.info('test');
+  console.log('INFO');
   res.send('Hello World from Express serverless!');
 });
 
