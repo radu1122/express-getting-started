@@ -1,18 +1,15 @@
 backend:
     functions:
         - entry: index.mjs
-          handler: handler
           name: express-getting-started-function
           path: ./
-          type: aws
+          type: httpServer
     language:
         name: js
         packageManager: npm
     path: ./
     scripts:
         deploy:
-            - npm install
-        local:
             - npm install
 name: express-getting-started
 region: us-east-1
